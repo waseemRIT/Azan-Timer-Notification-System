@@ -4,7 +4,7 @@ def main():
     try:
         # Create a socket object for TCP connection
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        host = socket.gethostname()  # Get the hostname of the client
+        host = "localhost" or socket.gethostname()  # Get the hostname of the client
         port = 9999  # Communication port between client and server
         s.connect((host, port))  # Connect to the server
     except socket.error as e:
